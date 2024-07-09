@@ -35,13 +35,20 @@ h1 {
 
 button {
     margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 1em;
+    padding: 15px 30px;
+    font-size: 1.5em;
+    font-family: 'Courier New', Courier, monospace;
     cursor: pointer;
-    border: none;
+    border: 2px solid white;
     border-radius: 5px;
-    background-color: #007BFF;
+    background-color: transparent;
     color: white;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
 }
 
 .star {
