@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const numStars = 100;
-    const container = document.querySelector('.container');
+    const starsContainer = document.getElementById('stars');
 
     for (let i = 0; i < numStars; i++) {
         const star = document.createElement('div');
@@ -8,6 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
         star.style.left = `${Math.random() * 100}vw`;
         star.style.animationDuration = `${Math.random() * 2 + 3}s`;
         star.style.animationDelay = `${Math.random() * 5}s`;
-        container.appendChild(star);
+        starsContainer.appendChild(star);
     }
+
+    const redirectButton = document.getElementById('redirectButton');
+    redirectButton.addEventListener('click', () => {
+        window.location.href = 'https://neverlose.cc';
+    });
 });
