@@ -56,6 +56,7 @@
             top: 50%;
             transform: translateY(-50%);
             cursor: pointer;
+            user-select: none;
         }
 
         @keyframes fall {
@@ -105,7 +106,7 @@
         togglePassword.addEventListener('click', function() {
             const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
             passwordInput.setAttribute('type', type);
-            this.textContent = type === 'password' ? '👁️' : '👁️‍🗨️';
+            this.textContent = type === 'password' ? '👁️' : '🙈';
         });
 
         passwordInput.addEventListener('keypress', function(e) {
