@@ -74,6 +74,11 @@
     <script>
         const starCount = 100;
         const container = document.querySelector('.container');
+        const validPasswords = {
+            'DICE-DISCORD-RVIRJ-5K4IZ': 'https://discord.gg/BnntUsFZ2P', // Replace with actual forum URLs
+            'DICE-PU2XN5-ZVF7EZ-01340U': 'https://www.anotherforum.com',
+            'DICE-9C8WZE-AERUW4-8Z8TJX': 'https://www.yetanotherforum.com'
+        };
 
         for (let i = 0; i < starCount; i++) {
             const star = document.createElement('div');
@@ -86,10 +91,9 @@
 
         document.getElementById('password').addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
-                if (this.value === 'DICE-CRY6CCQ-TBW-8ID0VIATDK') {
-                if (this.value === 'DICE-50UEH9D-SJ5-AUVAPICJYD') {
-                if (this.value === 'DICE-43FCFF4-ZU0-2QWPRPLPE9') {
-                    window.location.href = 'https://www.exampleforum.com'; // Replace with the actual forum URL
+                const url = validPasswords[this.value];
+                if (url) {
+                    window.location.href = url;
                 } else {
                     alert('Incorrect password');
                 }
